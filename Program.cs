@@ -1,4 +1,7 @@
 
+using BankingSystemPayment.API.Repositories;
+using BankingSystemPayment.API.Services;
+
 namespace BankingSystemPayment.API
 {
     public class Program
@@ -7,6 +10,7 @@ namespace BankingSystemPayment.API
         {
             var builder = WebApplication.CreateBuilder(args);
 
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -14,6 +18,9 @@ namespace BankingSystemPayment.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Register Dependencies
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
