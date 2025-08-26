@@ -24,7 +24,10 @@ namespace BankingSystemPayment.API
             // Register Dependencies
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IAuthService, AuthService>();
-            builder.Services.AddScoped<BankingTest>();
+            builder.Services.AddDbContext<BankingTest>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
             
             var app = builder.Build();
 

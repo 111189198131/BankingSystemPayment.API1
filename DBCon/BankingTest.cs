@@ -4,9 +4,13 @@ namespace BankingSystemPayment.API.DBCon
 {
     public class BankingTest : DbContext
     {
+        
+        public BankingTest(DbContextOptions<BankingTest> options ):base(options) 
+        {
 
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Tbl_Login> Tbl_Logins { get; set; }
-        public virtual DbSet<Tbl_UserDetails> Tbl_UserDetails { get; set; }
+        }
+        public  DbSet<User> Users { get; set; }
+        public  DbSet<Tbl_Login> Tbl_Logins { get; set; }
+        public  DbSet<Tbl_UserDetails> Tbl_UserDetails { get; set; }
     }
 }

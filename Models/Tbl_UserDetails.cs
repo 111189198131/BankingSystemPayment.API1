@@ -1,7 +1,10 @@
-﻿namespace BankingSystemPayment.API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BankingSystemPayment.API.Models
 {
     public class Tbl_UserDetails
     {
+        [Key]
         public int TblId { get; set; }
         public string UserId { get; set; }
         public decimal TotalAmount { get; set; } = 0m;
