@@ -13,9 +13,9 @@ namespace BankingSystemPayment.API.Services
         }
         public LoginResponse Login(LoginRequest request)
         {
-            var user = _userRepository.GetUserByUsername(request.Username);
+            var user = _userRepository.GetUserByUsername(request.Username,request.Password);
 
-            if (user == null || user.PasswordHash  != request.Password)
+            if (user == null || user.Password  != request.Password)
             {
                 return new LoginResponse
                 {

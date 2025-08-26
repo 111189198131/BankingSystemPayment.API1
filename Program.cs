@@ -1,6 +1,9 @@
 
 using BankingSystemPayment.API.Repositories;
 using BankingSystemPayment.API.Services;
+using BankingSystemPayment.API.Models;
+using BankingSystemPayment.API.DBCon;
+using Microsoft.EntityFrameworkCore;
 
 namespace BankingSystemPayment.API
 {
@@ -21,6 +24,8 @@ namespace BankingSystemPayment.API
             // Register Dependencies
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<BankingTest>();
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

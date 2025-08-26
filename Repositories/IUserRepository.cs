@@ -4,6 +4,6 @@ namespace BankingSystemPayment.API.Repositories
 {
     public interface IUserRepository
     {
-        User? GetUserByUsername(string username);
+        Tbl_Login? GetUserByUsername(string username,string password);
     }
 }
