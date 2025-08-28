@@ -1,0 +1,32 @@
+a{
+    font-size: large;
+}
+.customNav{
+      padding: 3px; 
+    /* height: 30px; */
+    /* margin: 3px; */
+    
+}
+.header{
+    display: flex;
+    align-items: center;
+
+    /* justify-content: space-between; */
+    background-color: antiquewhite;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 3px;
+    height: fit-content;
+    height: 40px;
+}
+.customInput{
+    margin: 5px;
+}
+
+.heading{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.fa-solid fa-heart{
+    font-size: 25px;
+}
