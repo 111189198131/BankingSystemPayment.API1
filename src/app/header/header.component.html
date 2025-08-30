@@ -2,15 +2,25 @@
   <h2 class="heading">Banking</h2>
   <nav class="customNav">
     
-    <a href="#"><i class="fa-solid fa-house"></i> Home</a> | 
+    <a href="#"> Home</a> | 
     <a href="#">About</a> | 
     <a href="#">Contact</a>
 
    
 
-    <input class="customInput" placeholder="Search...">
-
-     <i class="fa-solid fa-heart "></i>
+    <!-- <input class="customInput" placeholder="Search..."> -->
+<app-search-input></app-search-input>
+     <i class="fa-solid fa-heart customIcon" ></i>
+     <div class="dropdown ">
+  <button class="btn btn-secondary dropdown-toggle customDropdown "  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
   </nav>
   
 </header>

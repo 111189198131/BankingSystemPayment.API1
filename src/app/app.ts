@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { HeaderComponent} from './header/header.component';
+import { Jobcard } from './jobcard/jobcard';
 
 
 @Component({
@@ -7,7 +8,7 @@ import { HeaderComponent} from './header/header.component';
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports :[HeaderComponent]
+  imports :[HeaderComponent,Jobcard]
 })
 export class App {
   //protected readonly title = signal('angular-BankingAPI');

@@ -1,0 +1,16 @@
+<div class="jobCard card">
+    <img [src]="JobDiscription.imageUrl">
+    <hr>
+    <label>Role : {{JobDiscription.Role}}</label>
+    <hr>
+    <label>Tech : {{JobDiscription.Tech}}</label>
+    <hr>
+    <label>Joining Date : {{JobDiscription.JoiningDate | date :'dd-MM-yyyy'}}</label>
+    <hr>
+    <label>Salary : {{JobDiscription.Salary}}</label>
+    <hr>
+    <label>Negotiable Till :  {{getNegotiableSalary()}}</label>
+    <hr>
+    <label>Vacancy : {{JobDiscription.Vacancy}}</label>
+    <button [disabled]="(JobDiscription.Vacancy <= 0)">Apply</button>
+</div>

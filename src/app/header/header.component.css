@@ -3,6 +3,8 @@ a{
 }
 .customNav{
       padding: 3px; 
+      display: flex;
+      align-items: center;
     /* height: 30px; */
     /* margin: 3px; */
     
@@ -12,8 +14,10 @@ a{
     align-items: center;
 
     /* justify-content: space-between; */
-    background-color: antiquewhite;
-    border: 2px solid red;
+    /* background-color: #e07c2f; */
+    /* border: 2px solid red; */
+    background: #fa8e00;
+    background: linear-gradient(360deg,rgba(250, 142, 0, 0.94) 1%, rgba(242, 153, 10, 1) 46%, rgba(230, 148, 16, 1) 100%);
     border-radius: 5px;
     padding: 3px;
     height: fit-content;
@@ -21,12 +25,33 @@ a{
 }
 .customInput{
     margin: 5px;
+    border-radius: 6px;
 }
 
 .heading{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }
 
-.fa-solid fa-heart{
+.customIcon{
+    color: aliceblue;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover{
+    text-decoration:underline;
+}
+i{
     font-size: 25px;
+    color: white;
+    
+}
+.customDropdown{
+ height: 35px;
+ margin-left: 5px;;
+ 
 }
