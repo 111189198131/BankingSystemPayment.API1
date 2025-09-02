@@ -1,1 +1,10 @@
-<input class="customInput" placeholder="Search...">
+
+  <!-- (input)="onInputChange($event)" -->
+<div class="customDiv">
+    <input class="customInput" placeholder="Search..." 
+    [(ngModel)]="searchInput"
+    (input)="onSearchTextChange()"
+    >
+
+<p *ngIf="searchInput !=''"> Search result : {{searchInput}}</p>
+</div>

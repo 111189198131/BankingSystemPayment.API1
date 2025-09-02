@@ -2,3 +2,8 @@
     margin: 5px;
     border-radius: 6px;
 }
+
+.customDiv{
+    display: flex;
+    align-items: center;
+}

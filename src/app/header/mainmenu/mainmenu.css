@@ -1,0 +1,10 @@
+div{
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    justify-content: space-around;
+    color: white;
+    margin-left: 10px;
+}

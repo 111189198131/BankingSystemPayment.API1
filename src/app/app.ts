@@ -13,4 +13,14 @@ import { Jobcard } from './jobcard/jobcard';
 export class App {
   //protected readonly title = signal('angular-BankingAPI');
   title='New Project';
+
+
+
+
+searchText:string='';
+
+  onSearchTextChange(value:string){
+    console.log(value);
+this.searchText=value;
+  }
 }

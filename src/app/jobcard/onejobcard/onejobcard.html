@@ -1,0 +1,22 @@
+<div class="jobCard card" >
+    <img [src]="jobdisc.imageUrl">
+    <hr>
+    <label>Role : {{jobdisc.Role}}</label>
+    <hr>
+    <label>Tech : {{jobdisc.Tech}}</label>
+    <hr>
+    <label>Joining Date : {{jobdisc.JoiningDate | date :'dd-MM-yyyy'}}</label>
+    <hr>
+    <label>Salary : {{jobdisc.Salary}}</label>
+    <hr>
+    <label>Negotiable Till :  {{getNegotiableSalary(jobdisc.Negotiable,jobdisc.Salary)}}</label>
+    <hr>
+    <label>Vacancy : {{jobdisc.Vacancy}}</label>
+    <hr>
+    <button [disabled]="(jobdisc.Vacancy <= 0)">Apply</button>
+    <label [ngStyle]="{fontWeight:'bold',color:jobdisc.OpenForApply ? 'green' :'red'}">
+        <p>{{jobdisc.OpenForApply ? 'available to apply' :'Completed'}}</p>
+    </label>
+<hr>
+    
+</div>

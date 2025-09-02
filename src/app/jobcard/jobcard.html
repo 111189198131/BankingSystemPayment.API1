@@ -1,16 +1,50 @@
-<div class="jobCard card">
-    <img [src]="JobDiscription.imageUrl">
+ <!-- [All]="TotalCount"
+ [Available] ="AvailableCount"
+ [NotAvailable] ="NotAvailableCount" -->
+ <app-filters
+ [All]="TotalCount"
+ [Available] ="AvailableCount"
+ [NotAvailable] ="NotAvailableCount"
+ (selectedRadiobuttonChange)="onChangeFilter($event)"
+ ></app-filters>
+<div class="container jobCardContainer ">
+
+<!-- <div class="jobCard card" *ngFor="let i of JobDiscription">
+    <img [src]="i.imageUrl">
     <hr>
-    <label>Role : {{JobDiscription.Role}}</label>
+    <label>Role : {{i.Role}}</label>
     <hr>
-    <label>Tech : {{JobDiscription.Tech}}</label>
+    <label>Tech : {{i.Tech}}</label>
     <hr>
-    <label>Joining Date : {{JobDiscription.JoiningDate | date :'dd-MM-yyyy'}}</label>
+    <label>Joining Date : {{i.JoiningDate | date :'dd-MM-yyyy'}}</label>
     <hr>
-    <label>Salary : {{JobDiscription.Salary}}</label>
+    <label>Salary : {{i.Salary}}</label>
     <hr>
-    <label>Negotiable Till :  {{getNegotiableSalary()}}</label>
+    <label>Negotiable Till :  {{getNegotiableSalary(i.Negotiable,i.Salary)}}</label>
     <hr>
-    <label>Vacancy : {{JobDiscription.Vacancy}}</label>
-    <button [disabled]="(JobDiscription.Vacancy <= 0)">Apply</button>
+    <label>Vacancy : {{i.Vacancy}}</label>
+    <hr>
+    <button [disabled]="(i.Vacancy <= 0)">Apply</button>
+    <label [ngStyle]="{fontWeight:'bold',color:i.OpenForApply ? 'green' :'red'}">
+        <p>{{i.OpenForApply ? 'available to apply' :'Completed'}}</p>
+    </label>
+<hr>
+    
+</div> -->
+<!-- <app-onejobcard> *ngFor="let i of JobDiscription"</app-onejobcard> -->
+ 
+<div *ngFor="let i of jobCardlist">
+ <app-onejobcard  [jobdisc]="i" *ngIf="selectedFilterRadioButton === 'All' || i.OpenForApply.toString() === selectedFilterRadioButton"> </app-onejobcard>
+ </div>
 </div>
+
+
+<!-- <div>
+        <button (click)="Decrement()">-</button>
+        <span>{{count}}</span>
+        <button (click)="Increment()">+</button>
+    </div> -->
+
+<!-- <div *ngFor ="let item of jobCardlist">
+    <p>{{item}}</p>
+</div> -->
